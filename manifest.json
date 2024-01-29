@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Additional Cost Detector",
+    "version": "1.0",
+    "description": "This extension detects additional costs on e-commerce websites.",
+    "icons": {
+        "16": "icons/icon.png",
+        "32": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+      },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.ecommercewebsite.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action":{
+        "default_icon":{
+            "16": "icons/icon.png",
+            "32": "icons/icon.png",
+            "48": "icons/icon.png",
+            "128": "icons/icon.png"
+
+        }
+    },
+    "browser_action":{
+        "default_popup": "popup.html"
+    }
+  }
